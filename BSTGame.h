@@ -22,7 +22,7 @@ private:
 
 Node* Roo;
 
-void deleteTree(Node* node):
+void deleteTree(Node* node);
 int maxPoints(Node* node);
 
 public:

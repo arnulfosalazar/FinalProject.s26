@@ -11,38 +11,38 @@ BSTGame::Node::Node(string q, int p, string ans) {
 }
 BSTGame::BSTGame() {
     root = new Node(
-        "A Tarnished maiden offers guidance. Accept her accord? (yes/no)",
+        "You awake in a place called limgrave. Do you wish to go to west? (yes/no) ",
         10,
         "yes"
     );
     root->left = new Node(
-        "You discover a Site of Grace. Rest beside it? (yes/no)",
+        "You go west and end up in a place called caelid and stumble upom a katana called moonveil. You enter a castle far into caelid and go down a Lift and see the Lagendary Warrior Radahn. Do you wish to fight him? (yes/no)",
         20,
         "yes"
     );
     root->right = new Node(
-        "A Rune Bear attacks from the woods! Fight it? (yes/no)",
-        -10,
+        "You head north to the Capital where the erdtree is located. You go to the foot of the Erdtree. Do you wish to enter? (yes/no)",
+        10,
         "yes"
     );
     root->left->left = new Node(
-        "You gain the blessing of the Erdtree! Victory awaits!",
-        50,
+        "You and Radahn battle it out and in a hard fought fight you are the victor and sit alone in the Red Desert of Caelid!",
+        500,
         "yes"
     );
     root->left->right = new Node(
-        "A hidden trap chest sends you to Caelid. Doom falls upon you!",
-        -30,
+        "You turn your back on radahn and he strikes you down in a blink of an eye. Your journey ends here",
+        -100000,
         "yes"
     );
     root->right->left = new Node(
-        "You slay the Rune Bear and claim legendary runes!",
-        40,
+        "As you enter the Erdtree the legendary Rivers of blood katana spawns in your hand. You see the Legendary Elden beast and defeat it in battle. You have now became the Elden Lord",
+        1000000,
         "yes"
     );
     root->right->right = new Node(
-        "The Rune Bear crushes the Tarnished. You Died.",
-        -50,
+        "You turn your back on the Erdtree. You walk away and the first Elden Lord Godfrey strikes you down because you have no weapons.  You Died.",
+        -50000,
         "yes"
     );
 }

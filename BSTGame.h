@@ -20,7 +20,7 @@ private:
       Node(string q, int p, string ans);
 };
 
-Node* Roo;
+Node* root;
 
 void deleteTree(Node* node);
 int maxPoints(Node* node);

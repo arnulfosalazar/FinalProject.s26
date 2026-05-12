@@ -12,11 +12,11 @@ private:
   class Node {
   public:
       string question;
-      int points
+      int points;
       string correctAnswer;
 
-      Node* left
-      Node* right
+      Node* left;
+      Node* right;
       Node(string q, int p, string ans);
 };
 

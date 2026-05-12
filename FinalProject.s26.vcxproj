@@ -129,6 +129,10 @@
   <ItemGroup>
     <ClCompile Include="BSTGame.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="main1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

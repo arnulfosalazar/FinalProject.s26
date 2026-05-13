@@ -6,6 +6,7 @@ using namespace std;
 
 class Node {
 public:
+// Node class stores
     int data;
     Node* next;
     Node* prev;
@@ -15,9 +16,11 @@ public:
 
 class DoublyLinkedList {
 private:
+//pointer
     Node* head;
     Node* tail;
 
+// Helps sort list
     void insertSorted(Node*& sortedHead, Node*& sortedTail, Node* node);
 
     Node* getMiddle(Node* start);
@@ -30,6 +33,7 @@ private:
     void updateTail();
 
 public:
+//constructs lisy and deconstructs memory
     DoublyLinkedList();
     ~DoublyLinkedList();
 

@@ -1,8 +1,9 @@
 #include "BSTGame.h"
 
 int main() {
-  
+  //starts program
     BSTGame game;
+  //creates game object
     game.game();
 
     cout << endl;

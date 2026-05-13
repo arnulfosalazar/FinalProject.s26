@@ -1,6 +1,6 @@
 #include "BSTGame.h"
 
-// Node constructor
+// Node constructor creates 1 node
 BSTGame::Node::Node(string q, int p, string ans) {
     question = q;
     points = p;
@@ -9,6 +9,7 @@ BSTGame::Node::Node(string q, int p, string ans) {
     left = nullptr;
     right = nullptr;
 }
+//BST constructor O n
 BSTGame::BSTGame() {
     root = new Node(
         "You awake in a place called limgrave. Do you wish to go to west? (yes/no) ",

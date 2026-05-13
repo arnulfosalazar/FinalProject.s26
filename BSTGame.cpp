@@ -61,6 +61,7 @@ void BSTGame::deleteTree(Node* node) {
     delete node;
 }
 
+//Follows one path oh...
 void BSTGame::game() {
 
     Node* current = root;
@@ -102,11 +103,12 @@ void BSTGame::game() {
     cout << "Total Runes: "
          << totalPoints << endl;
 }
+//Checks highest scoring path
 int BSTGame::maxPoints(Node* node) {
-
+//nothing? return 0
     if (node == nullptr)
         return 0;
-
+//checks both paths and adds current points to better
     if (node->left == nullptr &&
         node->right == nullptr) {
 
@@ -121,3 +123,8 @@ int BSTGame::maxPoints(Node* node) {
 int BSTGame::maxPoints() {
     return maxPoints(root);
 }
+
+
+
+//g++ main.cpp BSTGame.cpp -o game
+//./game

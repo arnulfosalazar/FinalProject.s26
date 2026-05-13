@@ -1,11 +1,12 @@
 #include "linkedlist.h"
 
+
 Node::Node(int value) {
     data = value;
     next = nullptr;
     prev = nullptr;
 }
-
+//initialize empty list
 DoublyLinkedList::DoublyLinkedList() {
     head = nullptr;
     tail = nullptr;
@@ -23,7 +24,7 @@ DoublyLinkedList::~DoublyLinkedList() {
     head = nullptr;
     tail = nullptr;
 }
-
+//add to end
 void DoublyLinkedList::push_back(int value) {
     Node* newNode = new Node(value);
 
@@ -48,7 +49,7 @@ void DoublyLinkedList::print() {
 
     cout << endl;
 }
-
+//insert in order
 void DoublyLinkedList::insertSorted(Node*& sortedHead, Node*& sortedTail, Node* node) {
     node->next = nullptr;
     node->prev = nullptr;
@@ -80,7 +81,7 @@ void DoublyLinkedList::insertSorted(Node*& sortedHead, Node*& sortedTail, Node* 
         current->prev = node;
     }
 }
-
+//insertion Sort
 void DoublyLinkedList::insertionSort() {
     Node* sortedHead = nullptr;
     Node* sortedTail = nullptr;
@@ -96,7 +97,7 @@ void DoublyLinkedList::insertionSort() {
     head = sortedHead;
     tail = sortedTail;
 }
-
+//Selection Sort
 void DoublyLinkedList::selectionSort() {
     Node* current = head;
 
@@ -119,7 +120,7 @@ void DoublyLinkedList::selectionSort() {
         current = current->next;
     }
 }
-
+//find minddle
 Node* DoublyLinkedList::getMiddle(Node* start) {
     if (start == nullptr) {
         return nullptr;
@@ -166,7 +167,7 @@ Node* DoublyLinkedList::merge(Node* left, Node* right) {
         return right;
     }
 }
-
+//Recursive split merge
 Node* DoublyLinkedList::mergeSortHelper(Node* start) {
     if (start == nullptr || start->next == nullptr) {
         return start;
@@ -191,7 +192,7 @@ void DoublyLinkedList::mergeSort() {
     head = mergeSortHelper(head);
     updateTail();
 }
-
+//rearage arround pivot
 Node* DoublyLinkedList::partition(Node* low, Node* high) {
     int pivot = high->data;
     Node* i = low->prev;
